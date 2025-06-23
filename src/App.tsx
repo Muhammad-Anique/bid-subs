@@ -17,6 +17,7 @@ import Bids from "./components/bids/Bids";
 import BidDetails from "./components/bids/BidDetails";
 import BidComparison from "./components/bids/BidComparison";
 import Files from "./components/files/Files";
+import Teams from "./components/teams/Teams";
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
               <Route path={`${ROUTES_ENUM.BID_DETAILS}/:tradeId/:bidId`} element={<BidDetails />} />
               <Route path={ROUTES_ENUM.BID_COMPARISON} element={<BidComparison />} />
               <Route path={ROUTES_ENUM.FILES} element={<Files />} />
+              <Route path={ROUTES_ENUM.TEAMS} element={<Teams />} />
             </Route>
           </Routes>
         </SessionProvider>

@@ -93,12 +93,12 @@ const Projects: React.FC = () => {
           <div
             key={project.id}
             onClick={() => handleProjectClick(project.id)}
-            className="bg-gray-800 rounded-3xl overflow-hidden cursor-pointer group transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2"
+            className="bg-gradient-to-b from-neutral-200 to-neutral-100 dark:from-gray-800 dark:to-gray-800 rounded-3xl overflow-hidden cursor-pointer group transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2"
           >
             {/* Top Image Part */}
             <div className="h-36 w-full relative">
                 <img src="/bidsub-bg.jpg" alt={project.name} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-800 via-gray-900/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-200 to-neutral-100 dark:from-gray-800 dark:to-transparent"></div>
                 <div className="absolute top-4 right-4 text-xs text-white bg-black/30 backdrop-blur-sm px-2.5 py-1.5 rounded-lg">
                     {project.client}
                 </div>
@@ -111,23 +111,23 @@ const Projects: React.FC = () => {
                     className="absolute left-0 -top-20 w-[75%]"
                 >
                     <div 
-                        className="bg-gradient-to-t from-gray-900 to-gray-900/40 dark:from-gray-800 dark:to-primary/0 backdrop-blur-lg p-4"
-                        style={{ clipPath: 'polygon(0 0, 90% 0, 100% 100%, 0% 100%)' }}
+                        className="  p-4"
+                      
                     >
-                        <h3 className="font-bold text-white text-2xl truncate">{project.name}</h3>
-                        <p className="text-sm text-gray-300 truncate">{project.location}</p>
+                        <h3 className="font-bold text-zinc-700 dark:text-white text-2xl truncate">{project.name}</h3>
+                        <p className="text-sm text-zinc-600 dark:text-gray-300 truncate">{project.location}</p>
                     </div>
                 </div>
 
                 {/* Bottom Info */}
                 <div className="pt-8 flex justify-between items-end">
                     <div className="flex items-baseline">
-                        <span className="text-4xl font-bold text-white">{project.trades.length.toString().padStart(2, '0')}</span>
-                        <span className="text-gray-400 ml-2">Trades</span>
+                        <span className="text-4xl font-bold text-zinc-700 dark:text-white">{project.trades.length.toString().padStart(2, '0')}</span>
+                        <span className="dark:text-gray-400 text-zinc-600 ml-2">Trades</span>
                     </div>
                     <div className="text-right">
-                        <span className="font-semibold text-white">{project.totalBids}</span>
-                        <span className="text-gray-400 ml-1.5">Bids</span>
+                        <span className="font-semibold text-zinc-700 dark:text-white">{project.totalBids}</span>
+                        <span className="dark:text-gray-400 text-zinc-600 ml-1.5">Bids</span>
                     </div>
                 </div>
             </div>
