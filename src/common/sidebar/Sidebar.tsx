@@ -11,6 +11,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { ROUTES_ENUM } from "@/constants/routes.constant";
 import { useState, useEffect, useRef } from "react";
 import { useProject } from "@/hooks/useProject";
+import { FaUsers } from 'react-icons/fa';
 
 interface SidebarProps {
   toggleSidebar: () => void;
@@ -37,7 +38,7 @@ const sidebarItems: SidebarItem[] = [
   { icon: <Layers size={20} />, label: "Templates" },
   { icon: <Database size={20} />, label: "Pricing Database" },
   { icon: <Users size={20} />, label: "Clients" },
-  { icon: <UserCog size={20} />, label: "Team" },
+  { icon: <UserCog size={20} />, label: "Team", path: ROUTES_ENUM.TEAMS },
   {
     icon: <TbBrandGoogleAnalytics size={20} />,
     label: "Analytics",

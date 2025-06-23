@@ -12,4 +12,5 @@ export const ROUTES_ENUM = {
   BID_DETAILS: "/bid-details",
   BID_COMPARISON: "/bid-comparison",
   FILES: "/files",
+  TEAMS: "/teams",
 };
